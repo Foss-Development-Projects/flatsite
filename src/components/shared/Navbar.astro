@@ -1,0 +1,61 @@
+---
+---
+
+<nav class="navbar">
+  <h1>Flat For Sale</h1>
+  <ul class="navbar-list">
+    <li class="nav-list-link"><a href="#">Home</a></li>
+    <li class="nav-list-link"><a href="#">Details</a></li>
+    <li class="nav-list-link"><a href="#">Images</a></li>
+    <li class="nav-list-link"><a href="#">Features</a></li>
+    <li class="nav-list-link"><a href="#">Why Should U Buy ?</a></li>
+    <li class="nav-list-link"><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<style scoped lang="scss">
+	.navbar {
+		display:flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px;
+	}
+	.navbar-list {
+		display:flex;
+		list-style: none;
+
+	}
+	li a {
+		display: inline-block;
+		text-decoration: none;
+		color: white;
+		padding: 10px;
+		width: 100%;
+		font-family: "montserrat";
+		position: relative;
+		transition: transform, 200ms ease-in-out;
+		position: relative;
+		&:hover {
+			transform: scale(1.1);
+			transition: transform, 200ms ease-in-out;
+		}
+		&::after {
+			transition: transform, 200ms ease-in;
+			transform: scaleX(0px);
+		}
+		&:hover::after {
+			content:'';
+			display: block;
+			width:100%;
+			height: 5px;
+			position: absolute;
+			bottom:0;
+			background-color: goldenrod;
+			transform: scaleX(20px);
+			transform-origin: left;
+			border-radius: 20px;
+			transition: transform, 200ms ease-in;
+			left:0;
+		}
+	}
+</style>

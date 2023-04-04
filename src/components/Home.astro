@@ -1,10 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Navbar from './shared/Navbar.astro';
 import BgImg from './../assets/images/flat-8.jpg';
 ---
 
 <Layout title="Flat For Sale | Home">
 	<div class="home-container">
+        <Navbar />
         <h2 class="home-title">Presenting You the best flat in Kalyani, Nadia</h2>
     </div>
 </Layout>
@@ -17,5 +19,14 @@ import BgImg from './../assets/images/flat-8.jpg';
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center;
+    }
+    .home-title {
+        font-weight: bolder;
+        font-size: 36px;
+        color:white;
+        padding-top: 100px;
+        padding-left: 10px;
+        max-width: 350px;
+        font-family: "Roboto Slab";
     }
 </style>
