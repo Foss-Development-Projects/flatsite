@@ -19,14 +19,34 @@ import BgImg from './../assets/images/flat-8.jpg';
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center;
+        position: relative;
+        z-index: 2;
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: -1;
+        }
     }
     .home-title {
         font-weight: bolder;
         font-size: 36px;
         color:white;
-        padding-top: 100px;
+        padding-top: 50px;
         padding-left: 10px;
         max-width: 350px;
         font-family: "Roboto Slab";
+        z-index: 2;
+    }
+    @media (max-width: 400px) {
+        .home-title {
+            font-size: 28px;
+            text-align: center;
+        }
     }
 </style>
