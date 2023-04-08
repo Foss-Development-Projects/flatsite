@@ -9,7 +9,7 @@ const data = [
 ];
 ---
 
-<div class="contact">
+<div class="contact" id="contact">
   <h3 class="header-section">Contact us</h3>
   <section class="contact-body">
     {
@@ -19,6 +19,7 @@ const data = [
             class="contact-content-icon"
             src={entry.icon}
             alt="Contact Icons"
+            loading="lazy"
           />
           <p class="contact-content-text">
             {entry.title} : {entry.content}

@@ -4,7 +4,7 @@ const { title, content, icon, iconAlt } = Astro.props;
 
 <div class="wsub">
   <section class="wsub-header">
-    <img class="wsub-logo" src={icon} alt={iconAlt} />
+    <img class="wsub-logo" src={icon} alt={iconAlt} loading="lazy" />
     <h3 class="wsub-title">{title}</h3>
   </section>
   <section class="wsub-body">

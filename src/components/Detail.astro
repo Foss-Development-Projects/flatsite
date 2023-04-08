@@ -19,7 +19,10 @@ const detailData = [
   <h2 class="header-section">Details</h2>
   <div class="detail-container">
     <section class="detail-map-section">
-      <img src={Map} alt="Map Image" class="cont" />
+      <a href="https://www.google.com/maps/place/B+14,+Block+B,+Kalyani,+West+Bengal+741235/@22.9674672,88.4335186,71m/data=!3m1!1e3!4m6!3m5!1s0x39f894e65ad28add:0xd7f0101f1a64cb31!8m2!3d22.9652154!4d88.4343306!16s%2Fg%2F11_tlfv8l" target="_blank" class="detail-map">
+        <img src={Map} alt="Map Image" class="cont" loading="lazy" />
+        CLICK TO SEE LOCATION
+      </a>
     </section>
     <section class="detail-content-section">
       {
@@ -52,10 +55,20 @@ const detailData = [
     padding: 2.5px 0;
     color: var(--default-fg-color);
   }
+  .detail-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--default-fg-color);
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+  }
   .cont {
     max-height: 250px;
     max-width: 250px;
     border-radius: 5px;
+    object-fit:cover;
   }
   @media (max-width: 600px) {
     .detail-container {

@@ -1,13 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from './shared/Navbar.astro';
-import BgImg from './../assets/images/flat-1.jpg';
+//import Video from 'https://download.pexels.com/vimeo/815840054/pexels-indranil-chatterjee-16281130.mp4';
 ---
 
 <Layout title="Flat For Sale | Home">
 	<div class="home-container" id="home">
         <Navbar />
         <h2 class="home-title">Presenting You the best flat in Kalyani, Nadia</h2>
+        <video controls class="video-tour" autoplay>
+            <source src="https://flatsite.b-cdn.net/tour.mp4" type="video/mp4">
+        </video>
     </div>
 </Layout>
 
@@ -20,6 +23,11 @@ import BgImg from './../assets/images/flat-1.jpg';
         background-attachment: fixed;
         background-position: center;
         position: relative;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         z-index: 2;
         &::before {
             content: '';
@@ -43,9 +51,28 @@ import BgImg from './../assets/images/flat-1.jpg';
         font-family: "Roboto Slab";
         z-index: 2;
     }
+    .video-tour {
+        margin-top: 50px;
+        border: 2px solid yellow;
+        width: 280px;
+        border-radius: 10px;
+    }
     @media (max-width: 800px) {
         .home-title {
             padding-top: 350px;
+        }
+    }
+    @media (max-width: 600px) {
+        .home-container {
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+        .video-tour {
+            margin-top: 100px;
+            width: 225px;
+        }
+        .home-title {
+            padding: 0;
         }
     }
     @media (max-width: 400px) {
