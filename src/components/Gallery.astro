@@ -3,46 +3,151 @@ import { SwiperSlide, Swiper } from "swiper/react";
 import "swiper/swiper.css";
 import "swiper/css/navigation";
 
-import Flat1 from './../assets/images/flat-1.jpg';
-import Flat2 from './../assets/images/flat-2.jpg';
-import Flat3 from './../assets/images/flat-3.jpg';
-import Flat4 from './../assets/images/flat-4.jpg';
-import Flat5 from './../assets/images/flat-5.jpg';
-import Flat6 from './../assets/images/flat-6.jpg';
-import Flat7 from './../assets/images/flat-7.jpg';
-import Flat8 from './../assets/images/flat-8.jpg';
-import Flat9 from './../assets/images/flat-9.jpg';
-import Flat10 from './../assets/images/flat-10.jpg';
-import Flat11 from './../assets/images/flat-11.jpg';
-import Flat12 from './../assets/images/flat-12.jpg';
-import Flat13 from './../assets/images/flat-13.jpg';
-import Flat14 from './../assets/images/flat-14.jpg';
-import Flat15 from './../assets/images/flat-15.jpg';
-import Flat16 from './../assets/images/flat-16.jpg';
-import Flat17 from './../assets/images/flat-17.jpg';
-import Flat18 from './../assets/images/flat-18.jpg';
-import Flat19 from './../assets/images/flat-19.jpg';
-import Flat20 from './../assets/images/flat-20.jpg';
-import Flat21 from './../assets/images/flat-21.jpg';
+import Flat1 from "./../assets/images/flat-1.jpg";
+import Flat2 from "./../assets/images/flat-2.jpg";
+import Flat3 from "./../assets/images/flat-3.jpg";
+import Flat4 from "./../assets/images/flat-4.jpg";
+import Flat5 from "./../assets/images/flat-5.jpg";
+import Flat6 from "./../assets/images/flat-6.jpg";
+import Flat7 from "./../assets/images/flat-7.jpg";
+import Flat8 from "./../assets/images/flat-8.jpg";
+import Flat9 from "./../assets/images/flat-9.jpg";
+import Flat10 from "./../assets/images/flat-10.jpg";
+import Flat11 from "./../assets/images/flat-11.jpg";
+import Flat12 from "./../assets/images/flat-12.jpg";
+import Flat13 from "./../assets/images/flat-13.jpg";
+import Flat14 from "./../assets/images/flat-14.jpg";
+import Flat15 from "./../assets/images/flat-15.jpg";
+import Flat16 from "./../assets/images/flat-16.jpg";
+import Flat17 from "./../assets/images/flat-17.jpg";
+import Flat18 from "./../assets/images/flat-18.jpg";
+import Flat19 from "./../assets/images/flat-19.jpg";
+import Flat20 from "./../assets/images/flat-20.jpg";
+import Flat21 from "./../assets/images/flat-21.jpg";
+import Flat22 from "./../assets/images/flat-22.jpg";
+import Flat23 from "./../assets/images/flat-23.jpg";
+import Flat24 from "./../assets/images/flat-24.jpg";
+import Flat25 from "./../assets/images/flat-25.jpg";
+import Flat26 from "./../assets/images/flat-26.jpg";
+import Flat27 from "./../assets/images/flat-27.jpg";
+import Flat28 from "./../assets/images/flat-28.jpg";
+import Flat29 from "./../assets/images/flat-29.jpg";
+import Flat30 from "./../assets/images/flat-30.jpg";
+import Flat31 from "./../assets/images/flat-31.jpg";
+import Flat32 from "./../assets/images/flat-32.jpg";
+import Flat33 from "./../assets/images/flat-33.jpg";
+import Flat34 from "./../assets/images/flat-34.jpg";
+import Flat35 from "./../assets/images/flat-35.jpg";
+import Flat36 from "./../assets/images/flat-36.jpg";
+import Flat37 from "./../assets/images/flat-37.jpg";
+import Flat38 from "./../assets/images/flat-38.jpg";
+import Flat39 from "./../assets/images/flat-39.jpg";
+import Flat40 from "./../assets/images/flat-40.jpg";
+import Flat41 from "./../assets/images/flat-41.jpg";
+import Flat42 from "./../assets/images/flat-42.jpg";
+import Flat43 from "./../assets/images/flat-43.jpg";
+import Flat44 from "./../assets/images/flat-44.jpg";
+import Flat45 from "./../assets/images/flat-45.jpg";
+import Flat46 from "./../assets/images/flat-46.jpg";
+import Flat47 from "./../assets/images/flat-47.jpg";
+import Flat48 from "./../assets/images/flat-48.jpg";
+import Flat49 from "./../assets/images/flat-49.jpg";
+import Flat50 from "./../assets/images/flat-50.jpg";
+import Flat51 from "./../assets/images/flat-51.jpg";
 
-const data = [
-    Flat1,Flat2,Flat3,Flat4,Flat5,Flat6,Flat7,
-    Flat8,Flat9,Flat10,Flat11,Flat12,Flat13,Flat14,
-    Flat15,Flat16,Flat17,Flat18,Flat19,Flat20,Flat21,
-]
-
+const data1 = [Flat1, Flat2, Flat3, Flat4, Flat5, Flat6];
+const data2 = [
+  Flat7,
+  Flat8,
+  Flat9,
+  Flat10,
+  Flat11,
+  Flat12,
+  Flat13,
+  Flat14,
+  Flat15,
+  Flat16,
+];
+const data3 = [
+  Flat17,
+  Flat18,
+  Flat19,
+  Flat20,
+  Flat21,
+  Flat22,
+  Flat23,
+  Flat24,
+  Flat25,
+  Flat26,
+  Flat27,
+  Flat28,
+  Flat29,
+  Flat30,
+  Flat31,
+  Flat32,
+  Flat33,
+  Flat34,
+  Flat35,
+  Flat36,
+  Flat37,
+  Flat38,
+  Flat39,
+  Flat40,
+  Flat41,
+  Flat42,
+  Flat43,
+  Flat44,
+  Flat45,
+  Flat46,
+  Flat47,
+  Flat48,
+  Flat49,
+  Flat50,
+  Flat51,
+];
 ---
 
-<div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      {data.map((entry) => (
-        <div class="swiper-slide">
-            <img src={entry} alt="Slider Images">
-        </div>
-      ))}
+<div class="gallery">
+  <h3 class="header-section">Gallery</h3>
+  <section class="gallery-image-section">
+    <div class="swiper mySwiper1">
+      <div class="swiper-wrapper">
+        {
+          data1.map((entry) => (
+            <div class="swiper-slide">
+              <img src={entry} alt="Slider Images" />
+            </div>
+          ))
+        }
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
-    <div class="swiper-pagination"></div>
-  </div>
+    <div class="swiper mySwiper2">
+      <div class="swiper-wrapper">
+        {
+          data2.map((entry) => (
+            <div class="swiper-slide">
+              <img src={entry} alt="Slider Images" />
+            </div>
+          ))
+        }
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="swiper mySwiper3">
+      <div class="swiper-wrapper">
+        {
+          data3.map((entry) => (
+            <div class="swiper-slide">
+              <img src={entry} alt="Slider Images" />
+            </div>
+          ))
+        }
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+</div>
 <style>
   .swiper {
     width: 100%;
@@ -64,16 +169,40 @@ const data = [
     height: 100%;
     object-fit: cover;
   }
+  .gallery-image-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
 </style>
 <script>
-    import Swiper from 'swiper'
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      centeredSlides: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-  </script>
+  import Swiper from "swiper";
+  var swiper1 = new Swiper(".mySwiper1", {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    centeredSlides: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+  var swiper2 = new Swiper(".mySwiper2", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    centeredSlides: true,
+    centerInsufficientSlides:true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+  var swiper3 = new Swiper(".mySwiper3", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    centeredSlides: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
