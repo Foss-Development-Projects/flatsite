@@ -1,11 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from './shared/Navbar.astro';
-import BgImg from './../assets/images/flat-8.jpg';
+import BgImg from './../assets/images/flat-1.jpg';
 ---
 
 <Layout title="Flat For Sale | Home">
-	<div class="home-container">
+	<div class="home-container" id="home">
         <Navbar />
         <h2 class="home-title">Presenting You the best flat in Kalyani, Nadia</h2>
     </div>
@@ -14,7 +14,7 @@ import BgImg from './../assets/images/flat-8.jpg';
 <style lang="scss">
     .home-container {
         height: 100vh;
-        background-image: url('./../assets/images/flat-8.jpg');
+        background-image: url('./../assets/images/flat-1.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -37,11 +37,16 @@ import BgImg from './../assets/images/flat-8.jpg';
         font-weight: bolder;
         font-size: 36px;
         color:white;
-        padding-top: 50px;
+        padding-top: 150px;
         padding-left: 10px;
         max-width: 350px;
         font-family: "Roboto Slab";
         z-index: 2;
+    }
+    @media (max-width: 800px) {
+        .home-title {
+            padding-top: 350px;
+        }
     }
     @media (max-width: 400px) {
         .home-title {

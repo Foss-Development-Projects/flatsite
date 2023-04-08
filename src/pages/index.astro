@@ -2,12 +2,20 @@
 import Layout from '../layouts/Layout.astro';
 import Home from '../components/Home.astro';
 import Navbar from '../components/shared/Navbar.astro';
-import FeatureCard from '../components/modules/FeatureCard.astro';
+import Feature from '../components/Feature.astro';
+import Detail from '../components/Detail.astro';
+import WSUB from '../components/WSUB.astro';
+import Contact from '../components/Contact.astro';
+import Gallery from '../components/Gallery.astro';
 ---
 
 <Layout title="Flat For Sale">
 	<Home />
-	<FeatureCard />
+	<Gallery />
+	<Detail />
+	<Feature />
+	<WSUB />
+	<Contact />
 </Layout>
 
 <style></style>

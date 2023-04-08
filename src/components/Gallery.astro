@@ -1,0 +1,79 @@
+---
+import { SwiperSlide, Swiper } from "swiper/react";
+import "swiper/swiper.css";
+import "swiper/css/navigation";
+
+import Flat1 from './../assets/images/flat-1.jpg';
+import Flat2 from './../assets/images/flat-2.jpg';
+import Flat3 from './../assets/images/flat-3.jpg';
+import Flat4 from './../assets/images/flat-4.jpg';
+import Flat5 from './../assets/images/flat-5.jpg';
+import Flat6 from './../assets/images/flat-6.jpg';
+import Flat7 from './../assets/images/flat-7.jpg';
+import Flat8 from './../assets/images/flat-8.jpg';
+import Flat9 from './../assets/images/flat-9.jpg';
+import Flat10 from './../assets/images/flat-10.jpg';
+import Flat11 from './../assets/images/flat-11.jpg';
+import Flat12 from './../assets/images/flat-12.jpg';
+import Flat13 from './../assets/images/flat-13.jpg';
+import Flat14 from './../assets/images/flat-14.jpg';
+import Flat15 from './../assets/images/flat-15.jpg';
+import Flat16 from './../assets/images/flat-16.jpg';
+import Flat17 from './../assets/images/flat-17.jpg';
+import Flat18 from './../assets/images/flat-18.jpg';
+import Flat19 from './../assets/images/flat-19.jpg';
+import Flat20 from './../assets/images/flat-20.jpg';
+import Flat21 from './../assets/images/flat-21.jpg';
+
+const data = [
+    Flat1,Flat2,Flat3,Flat4,Flat5,Flat6,Flat7,
+    Flat8,Flat9,Flat10,Flat11,Flat12,Flat13,Flat14,
+    Flat15,Flat16,Flat17,Flat18,Flat19,Flat20,Flat21,
+]
+
+---
+
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      {data.map((entry) => (
+        <div class="swiper-slide">
+            <img src={entry} alt="Slider Images">
+        </div>
+      ))}
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+<style>
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
+<script>
+    import Swiper from 'swiper'
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>

@@ -1,0 +1,85 @@
+---
+import MunicipalityLogo from "./../assets/icons/municipality.svg";
+import SchoolLogo from "./../assets/icons/school.svg";
+import BusstandLogo from "./../assets/icons/bus-stand.svg";
+import BazaarLogo from "./../assets/icons/bazaar.svg";
+import RailwayStationLogo from "./../assets/icons/railway-station.svg";
+import MedicineShopLogo from "./../assets/icons/pharmacy.svg";
+
+import WSUBCard from "./modules/WSUBCard.astro";
+const data = [
+  {
+    id: 1,
+    title: "Municipality",
+    content:
+      "Distance between apartment and municipality is short",
+    icon: MunicipalityLogo,
+    iconAlt: "Municipality Logo",
+  },
+  {
+    id: 2,
+    title: "Bus Stand",
+    content:
+      "Nearby bus stand Nimtala, just a few steps away",
+    icon: BusstandLogo,
+    iconAlt: "Busstand Logo",
+  },
+  {
+    id: 3,
+    title: "Schools",
+    content:
+      "Lots of schools available nearby, both english and bengali medium.",
+    icon: SchoolLogo,
+    iconAlt: "School Logo",
+  },
+  {
+    id: 4,
+    title: "Market",
+    content:
+      "Nearest markets such as Saptaparni at Central Park, No. 14 Market and Buddhapark market available.",
+    icon: BazaarLogo,
+    iconAlt: "Bazaar Logo",
+  },
+  {
+    id: 5,
+    title: "Medicine & Health",
+    content:
+      "Medicine shops like Apollo, Frank Ross available",
+    icon: MedicineShopLogo,
+    iconAlt: "MedicineShop Logo",
+  },
+  {
+    id: 6,
+    title: "Rail Station",
+    content:
+      "Nearest Rail station Ghoshpara a few minutes away from apartment",
+    icon: RailwayStationLogo,
+    iconAlt: "RailwayStation Logo",
+  },
+];
+---
+
+<div class="wsub" id="wsub">
+  <h2 class="header-section">Why Should You Buy ?</h2>
+  {
+    data.map((entry) => (
+      <WSUBCard
+        id={entry.id}
+        title={entry.title}
+        content={entry.content}
+        icon={entry.icon}
+        iconAlt={entry.iconAlt}
+      />
+    ))
+  }
+</div>
+
+<style lang="scss" scoped>
+  .wsub {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+  }
+</style>

@@ -1,19 +1,19 @@
 ---
-
-const { id, title, content, icon, iconAlt } = Astro.props;
+const { title, content, icon, iconAlt } = Astro.props;
 ---
 
-<div class="feature">
-    <section key={id} class="feature-header">
-      <img class="feature-logo" src={icon} alt={iconAlt} loading="lazy" />
-      <h3 class="feature-title">{title}</h3>
-    </section>
-    <section class="feature-body">
-      <p class="feature-content">{content}</p>
-    </section>
-  </div>
-<style lang="scss">
-  .feature {
+<div class="wsub">
+  <section class="wsub-header">
+    <img class="wsub-logo" src={icon} alt={iconAlt} />
+    <h3 class="wsub-title">{title}</h3>
+  </section>
+  <section class="wsub-body">
+    <p class="wsub-content">{content}</p>
+  </section>
+</div>
+
+<style lang="scss" scoped>
+  .wsub {
     padding: 5px;
     background-color: var(--default-bg-color);
     color: var(--default-fg-color);
@@ -26,17 +26,17 @@ const { id, title, content, icon, iconAlt } = Astro.props;
       grid-gap: 5px;
       grid-template-columns: 20px 1fr;
 
-      .feature-logo {
+      .wsub-logo {
         width: 20px;
         height: 20px;
       }
-      .feature-title {
+      .wsub-title {
         font-family: "Open Sans";
       }
     }
     &-body {
       margin-top: 10px;
-      .feature-content {
+      .wsub-content {
         font-family: "Montserrat";
         font-size: 14px;
       }

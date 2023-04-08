@@ -1,0 +1,142 @@
+---
+import FloorLogo from "./../assets/icons/apartment.svg";
+import LiftLogo from "./../assets/icons/elevator.svg";
+import PowerLogo from "./../assets/icons/power.svg";
+import WatchmanLogo from "./../assets/icons/watchman.svg";
+import NoPollutionLogo from "./../assets/icons/no-pollution.svg";
+import CCTVLogo from "./../assets/icons/cctv.svg";
+import GarageLogo from "./../assets/icons/garage.svg";
+import BalconyLogo from "./../assets/icons/balcony.svg";
+import NeighborLogo from "./../assets/icons/neighbor.svg";
+import OwnerLogo from "./../assets/icons/ownership.svg";
+import OpenTerraceLogo from './../assets/icons/rooftop.svg';
+import WaterSupplyLogo from './../assets/icons/water-supply.svg';
+
+import FeatureCard from "./modules/FeatureCard.astro";
+
+const cardData = [
+  {
+    id: 1,
+    title: "3rd Floor",
+    content: "Located in 3rd floor(G+3) of the building, no direct sunlight on roof, thus cool environment.",
+    icon: FloorLogo,
+    iconAlt: "Apartment Logo",
+  },
+  {
+    id: 2,
+    title: "Lift",
+    content: "Lift is available in case if u dont like stairs.",
+    icon: LiftLogo,
+    iconAlt: "Lift Logo",
+  },
+  {
+    id: 3,
+    title: "-Pollution",
+    content: "Location of the apartment is in a pollution free area, letting u breathe fresh air.",
+    icon: NoPollutionLogo,
+    iconAlt: "No Pollution Logo",
+  },
+  {
+    id: 4,
+    title: "24/7 Power",
+    content: "Never run out of electricity with power backup available in the apartment.",
+    icon: PowerLogo,
+    iconAlt: "Power Logo",
+  },
+  {
+    id: 5,
+    title: "Watchman",
+    content: "Watchman to watch after your cars so that u stay busy with your life, without worry.",
+    icon: WatchmanLogo,
+    iconAlt: "Watchman Logo",
+  },
+  {
+    id: 6,
+    title: "CCTV",
+    content: "24/7 CCTV Surveillance to continuously guard intruders. Your security is taken seriously.",
+    icon: CCTVLogo,
+    iconAlt: "CCTV Logo",
+  },
+  {
+    id: 7,
+    title: "Neighbors",
+    content: "Highly Cooperative Neighbors, to help u whenever u need and possible.",
+    icon: NeighborLogo,
+    iconAlt: "Neighbors Logo",
+  },
+  {
+    id: 8,
+    title: "Balcony",
+    content: "Road facing balcony to enjoy cool breeze during summer, as well as view.",
+    icon: BalconyLogo,
+    iconAlt: "Balcony Logo",
+  },
+  {
+    id: 9,
+    title: "Garage",
+    content: "Flat comes with garage, no extra cost it.",
+    icon: GarageLogo,
+    iconAlt: "Garage Logo",
+  },
+  {
+    id: 10,
+    title: "Freehold",
+    content: "Ownership flat. Buy directly from seller. No third-party involved.",
+    icon: OwnerLogo,
+    iconAlt: "Owner Logo",
+  },
+  {
+    id: 11,
+    title: "24/7 Water supply",
+    content: "24/7 fresh & constant water supple available.",
+    icon: WaterSupplyLogo,
+    iconAlt: "Water Supply Logo",
+  },
+  {
+    id: 12,
+    title: "Open Terrace",
+    content: "Large airy & open terrace available.",
+    icon: OpenTerraceLogo,
+    iconAlt: "Terrace Logo",
+  },
+];
+---
+
+<div id="feature" class="feature-container">
+  <h2 class="header-section">Features</h2>
+  <section class="feature-body-section">
+    {
+      cardData.map((data) => (
+        <FeatureCard
+          id={data.id}
+          title={data.title}
+          content={data.content}
+          icon={data.icon}
+          iconAlt={data.iconAlt}
+        />
+      ))
+    }
+  </section>
+</div>
+<style lang="scss">
+  
+  .feature-body-section {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+  }
+
+  @media (max-width: 500px) {
+    .feature-body-section {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 400px) {
+    .feature-body-section {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
