@@ -8,9 +8,12 @@ import Navbar from './shared/Navbar.astro';
 	<div class="home-container" id="home">
         <Navbar />
         <h2 class="home-title">Presenting You the best flat in Kalyani, Nadia</h2>
-        <video controls class="video-tour" autoplay>
-            <source src="https://flatsite.b-cdn.net/tour.mp4" type="video/mp4">
-        </video>
+<!--         <video controls class="video-tour" autoplay>
+            
+        </video> -->
+        <div class="video-tour">
+            <iframe src="https://streamable.com/e/7ca1kh" width="250" height="444" frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
 </Layout>
 
@@ -54,8 +57,11 @@ import Navbar from './shared/Navbar.astro';
     .video-tour {
         margin-top: 50px;
         border: 2px solid yellow;
-        width: 280px;
+        width: 250px;
         border-radius: 10px;
+        iframe {
+            width: 100%;
+        }
     }
     @media (max-width: 800px) {
         .home-title {
